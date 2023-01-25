@@ -599,6 +599,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2258253105290134368}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarYRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2139614047}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarYRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -606,6 +630,18 @@ MonoBehaviour:
         - m_Target: {fileID: 4374531190584673186}
           m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
           m_MethodName: StopRotar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6177270868030184271}
+          m_TargetAssemblyTypeName: ComportamientoReal, Assembly-CSharp
+          m_MethodName: DescongelarRobot
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -766,6 +802,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2258253105290134368}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarYRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2139614047}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarYRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -773,6 +833,18 @@ MonoBehaviour:
         - m_Target: {fileID: 4374531190584673186}
           m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
           m_MethodName: StopRotar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6177270868030184271}
+          m_TargetAssemblyTypeName: ComportamientoReal, Assembly-CSharp
+          m_MethodName: DescongelarRobot
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1041,12 +1113,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133654772}
-  m_LocalRotation: {x: -0, y: 0.7071069, z: -0.70710665, w: 0}
-  m_LocalPosition: {x: -0, y: 0.047, z: 0.003008583}
+  m_LocalRotation: {x: 0.7070011, y: 0.012218384, z: -0.012218295, w: 0.70700145}
+  m_LocalPosition: {x: -3.1307397, y: 6.6589994, z: -0.0029158592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2139614046}
-  m_RootOrder: 4
+  m_Father: {fileID: 6841464317716365812}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150571248
 GameObject:
@@ -5670,6 +5742,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2139614047}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarZRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -5677,6 +5761,18 @@ MonoBehaviour:
         - m_Target: {fileID: 2258253105290134368}
           m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
           m_MethodName: StopRotar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6177270868030184271}
+          m_TargetAssemblyTypeName: ComportamientoReal, Assembly-CSharp
+          m_MethodName: DescongelarRobot
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7747,6 +7843,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2139614047}
+          m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
+          m_MethodName: CongelarZRobot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -7754,6 +7862,18 @@ MonoBehaviour:
         - m_Target: {fileID: 2258253105290134368}
           m_TargetAssemblyTypeName: Rotaciones, Assembly-CSharp
           m_MethodName: StopRotar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6177270868030184271}
+          m_TargetAssemblyTypeName: ComportamientoReal, Assembly-CSharp
+          m_MethodName: DescongelarRobot
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10638,18 +10758,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139614045}
-  m_LocalRotation: {x: 0.0025513174, y: 0.00046986344, z: -0.38623476, w: 0.9223969}
-  m_LocalPosition: {x: -3.141, y: 6.612, z: -0.003}
+  m_LocalRotation: {x: -0, y: 0.09874438, z: -0, w: 0.99511284}
+  m_LocalPosition: {x: -3.1307397, y: 6.882, z: -0.0029158592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3170424785054140684}
-  - {fileID: 4970648006347425591}
-  - {fileID: 2155778542646253216}
-  - {fileID: 6494606932233541684}
-  - {fileID: 133654773}
   m_Father: {fileID: 6841464317716365812}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0.29, y: -0.063, z: -45.441}
+  m_LocalEulerAnglesHint: {x: 0, y: 11.334, z: 0}
 --- !u!114 &2139614047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10675,7 +10791,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.10886342, y: 0.10724583, z: 0.0043772343}
+  m_ConnectedAnchor: {x: 1.463237, y: -1.5631325, z: 0.004236592}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -11189,12 +11305,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5466043434130890768}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0048758984, y: -0.7286515, z: 0.0015733032}
-  m_LocalScale: {x: 0.14291222, y: 0.4270671, z: 0.07640882}
+  m_LocalRotation: {x: 0.081534676, y: -0.99667054, z: -0, w: 0}
+  m_LocalPosition: {x: 0.042818177, y: -0.005357187, z: -1.0814157}
+  m_LocalScale: {x: -1.2132579, y: -2.9943113, z: -0.08274123}
   m_Children: []
-  m_Father: {fileID: 2139614046}
-  m_RootOrder: 2
+  m_Father: {fileID: 3170424785054140684}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2251268685383704763
 MeshRenderer:
@@ -11519,13 +11635,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7972552819780791065}
-  m_LocalRotation: {x: -0, y: 0.70710695, z: -0.7071067, w: 0}
-  m_LocalPosition: {x: -0, y: 0.26999998, z: 0.003008583}
-  m_LocalScale: {x: -0.11779217, y: -0.11779217, z: -0.92346716}
-  m_Children: []
+  m_LocalRotation: {x: -0.619064, y: -0.34170148, z: 0.34170124, w: -0.61906403}
+  m_LocalPosition: {x: -0.0044804676, y: 0, z: 0.003491502}
+  m_LocalScale: {x: -0.117792144, y: -0.117792115, z: -0.92346704}
+  m_Children:
+  - {fileID: 2155778542646253216}
+  - {fileID: 6494606932233541684}
+  - {fileID: 4970648006347425591}
   m_Father: {fileID: 2139614046}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 302.206}
 --- !u!23 &3255329627384989697
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12047,7 +12166,7 @@ HingeJoint:
     targetVelocity: 0
     force: 10000
     freeSpin: 0
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_Limits:
     min: -180
     max: 0
@@ -12172,12 +12291,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328469093940804341}
-  m_LocalRotation: {x: -0.7071068, y: -0.00000020861627, z: -0.00000020861627, w: 0.7071068}
-  m_LocalPosition: {x: 0.0047843456, y: -1.0927663, z: 0.22953294}
-  m_LocalScale: {x: 0.14325207, y: 0.07969366, z: 0.287239}
+  m_LocalRotation: {x: 0.08153493, y: -0.9966705, z: -0, w: 0}
+  m_LocalPosition: {x: -0.27242357, y: 1.9041284, z: -1.4757067}
+  m_LocalScale: {x: -1.216143, y: -0.67656213, z: -0.3110441}
   m_Children: []
-  m_Father: {fileID: 2139614046}
-  m_RootOrder: 1
+  m_Father: {fileID: 3170424785054140684}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5368571193571091036
 Transform:
@@ -12393,6 +12512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6841464317716365812}
+  - component: {fileID: 6177270868030184271}
   m_Layer: 0
   m_Name: Scorbot Sin bones(1)
   m_TagString: Untagged
@@ -12400,6 +12520,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6177270868030184271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177270868030184270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907fa247d2408074db4d11b8498f4e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidArray: []
 --- !u!23 &6200295006212156235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12532,12 +12665,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959586433689495865}
-  m_LocalRotation: {x: -0.00000008940697, y: 0.70710677, z: 0.7071068, w: 0.00000020861626}
-  m_LocalPosition: {x: 0.004779339, y: -1.0905557, z: -0.24424078}
-  m_LocalScale: {x: 0.14325213, y: 0.079693675, z: 0.28723902}
+  m_LocalRotation: {x: -0.9966705, y: -0.081534915, z: 0.000000018626448, w: 0}
+  m_LocalPosition: {x: 0.38115108, y: -2.0646245, z: -1.4733129}
+  m_LocalScale: {x: -1.2161431, y: -0.6765621, z: -0.3110441}
   m_Children: []
-  m_Father: {fileID: 2139614046}
-  m_RootOrder: 3
+  m_Father: {fileID: 3170424785054140684}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6688858867501258813
 Transform:
@@ -12571,6 +12704,7 @@ Transform:
   - {fileID: 4519921935323580283}
   - {fileID: 2139614046}
   - {fileID: 5582749781580707442}
+  - {fileID: 133654773}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 73.6, z: 0}

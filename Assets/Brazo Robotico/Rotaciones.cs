@@ -36,4 +36,18 @@ public class Rotaciones : MonoBehaviour{
         hinge.motor = motor; //Importante esta linea, asi se le indica a unity que tiene que usar todos los valores antes asignados en la funcion
         hinge.useMotor = true;
     }
+
+    //Congela las piezas del robot que no estan siendo utilizadas
+    public void CongelarYRobot()
+    {
+        var rigid = GetComponent<Rigidbody>();
+        rigid.constraints = RigidbodyConstraints.FreezeRotationY;
+    }
+
+    public void CongelarZRobot()
+    {
+        var rigid = GetComponent<Rigidbody>();
+        rigid.constraints = RigidbodyConstraints.FreezeRotationZ;
+    }
+
 }
