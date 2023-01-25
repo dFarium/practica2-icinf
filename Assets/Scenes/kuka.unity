@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44786322, g: 0.4978577, b: 0.5754561, a: 1}
+  m_IndirectSpecularColor: {r: 0.4478637, g: 0.49785835, b: 0.57545704, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6700,12 +6700,12 @@ HingeJoint:
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
-    force: 1000
+    force: 10000
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: -71.797005
+    max: 123.90906
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -6738,10 +6738,10 @@ HingeJoint:
     targetVelocity: 0
     force: 1000
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: 134.61766
+    max: 207.58112
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -6808,12 +6808,12 @@ HingeJoint:
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
-    force: 1000
+    force: 10000
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: -118.04949
+    max: 108.000946
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
