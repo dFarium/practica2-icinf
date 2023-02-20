@@ -1193,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ab3f56c763808945bba699dc011586a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.86658514
+      value: 0.9640759
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ab3f56c763808945bba699dc011586a, type: 3}
       propertyPath: m_LocalScale.z
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37b6c15da6333a4ba09e9189537e1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
 --- !u!1 &900360927
 GameObject:
   m_ObjectHideFlags: 0
