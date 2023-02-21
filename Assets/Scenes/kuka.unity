@@ -387,9 +387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cameras:
   - {fileID: 1379883344}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &118691320
 Transform:
   m_ObjectHideFlags: 0
@@ -3945,8 +3942,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: 134.61766
-    max: 207.58112
+    min: -110
+    max: 150
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -4017,8 +4014,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -118.04949
-    max: 108.000946
+    min: -118
+    max: 110
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
