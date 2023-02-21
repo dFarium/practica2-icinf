@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4478637, g: 0.49785835, b: 0.57545704, a: 1}
+  m_IndirectSpecularColor: {r: 0.44786322, g: 0.4978577, b: 0.5754561, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -471,7 +471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 1 \u2191"
+  m_Text: "Brazo 1 \u2191"
 --- !u!222 &122393396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 4 \u2193"
+  m_Text: "Mu\xF1eca 2 \u2193"
 --- !u!222 &224678292
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -792,6 +792,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224678289}
   m_CullTransparentMesh: 1
+--- !u!1 &259739715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 630681054204482562, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &259739717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259739715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 1930015136}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &268519355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 5 \u2190"
+  m_Text: "Mano \u2190"
 --- !u!222 &339111172
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1161,7 +1183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 2 \u2193"
+  m_Text: "Brazo 2 \u2193"
 --- !u!222 &448270866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1337,6 +1359,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514777902}
   m_CullTransparentMesh: 1
+--- !u!1 &610599490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3193073075916690263, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &610599496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610599490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 2101680509}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &635032078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1451,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 2 \u2191"
+  m_Text: "Brazo 2 \u2191"
 --- !u!222 &635032081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1416,6 +1460,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635032078}
   m_CullTransparentMesh: 1
+--- !u!1 &668722558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8468534113206710134, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &717247793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4451626748102021009, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &717247799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717247793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 610599490}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &770926241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1633,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 4 \u2191"
+  m_Text: "Mu\xF1eca 2 \u2191"
 --- !u!222 &789688335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2748,7 +2819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 1 \u2193"
+  m_Text: "Brazo 1 \u2193"
 --- !u!222 &1334509865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2840,6 +2911,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 12.763, y: 0.097, z: -0.021}
+--- !u!1 &1504771477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 435013437009170810, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1504771483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504771477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 717247793}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &1600504553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,7 +3003,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 3 \u2190"
+  m_Text: "Mu\xF1eca 1 \u2190"
 --- !u!222 &1600504556
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3249,7 +3342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Base \u2192"
+  m_Text: "Base Movil \u2192"
 --- !u!222 &1810607347
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3411,7 +3504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Base \u2190"
+  m_Text: "Base Movil \u2190"
 --- !u!222 &1881957869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3425,7 +3518,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081656, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1930015136}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3436,7 +3529,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081634, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 259739715}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3447,7 +3540,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081635, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1504771477}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3458,7 +3551,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081636, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 717247793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3469,7 +3562,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081637, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 610599490}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3480,7 +3573,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3003191888464081638, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
   m_PrefabInstance: {fileID: 3003191887142252632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2101680509}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb8dc534886314eae68ac037d9f31e, type: 3}
@@ -3590,6 +3683,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1930015136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4644914986862376675, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1930015142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930015136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 1504771477}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &1935223504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,7 +3813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 5 \u2192"
+  m_Text: "Mano \u2192"
 --- !u!222 &1937971813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4283,6 +4398,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090062509}
   m_CullTransparentMesh: 1
+--- !u!1 &2101680509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1659652340674890953, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+  m_PrefabInstance: {fileID: 3003191887142252632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2101680515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101680509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d69ecf8050b9940b0b4ea9b1f1bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubito: {fileID: 668722558}
+  componente: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &2123758559
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,7 +4657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ARM 3 \u2192"
+  m_Text: "Mu\xF1eca 1 \u2192"
 --- !u!222 &2145260106
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4536,6 +4673,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435013437009170810, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: Brazo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 435013437009170810, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-Brazo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630681054204482562, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: BaseFija
+      objectReference: {fileID: 0}
+    - target: {fileID: 630681054204482562, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-BaseFija
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659652340674890953, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: Muneca2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659652340674890953, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-Muneca2
+      objectReference: {fileID: 0}
     - target: {fileID: 2696550950917721990, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
       propertyPath: m_Name
       value: kuka
@@ -4564,6 +4725,14 @@ PrefabInstance:
       propertyPath: textoVelocidad
       value: 
       objectReference: {fileID: 74854339}
+    - target: {fileID: 3193073075916690263, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: Muneca1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193073075916690263, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-Muneca1
+      objectReference: {fileID: 0}
     - target: {fileID: 3325840572081575228, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4607,6 +4776,30 @@ PrefabInstance:
     - target: {fileID: 3325840572081575228, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451626748102021009, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: Brazo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451626748102021009, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-Brazo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644914986862376675, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: BaseMovil
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644914986862376675, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-BaseMovil
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468534113206710134, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_Name
+      value: Mano
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468534113206710134, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}
+      propertyPath: m_TagString
+      value: K-Mano
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7660e21f26f473146a8de7043cb09f6b, type: 3}

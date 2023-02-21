@@ -17,7 +17,7 @@ public static class SaveLoadSystemData
             Directory.CreateDirectory(fullPath);
         }
 
-        //crea el archivo en Json con el nombre proporcionado por el Script "TestSave"
+        //crea el archivo .Json con el nombre proporcionado por el Script "TestSave"
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(fullPath + fileName + ".json", json);
 
