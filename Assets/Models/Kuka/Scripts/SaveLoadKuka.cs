@@ -15,7 +15,7 @@ public class SaveLoadKuka : MonoBehaviour
     //Carpeta en la que se encuentran los archivos de guardado
     public const string carpeta = "Kuka-Data/";
     //El nombre con el cual se crearan los archivos json
-    public string namefileData;
+    public string namefileData = "Posicion ";
 
     //Se ejecuta al iniciar el programa
     private void Start()
@@ -77,7 +77,7 @@ public class SaveLoadKuka : MonoBehaviour
     public static void SaveData<T>(T data, string fileName)
     {
         //Se crea la dirección del archivo
-        string fullPath = Application.dataPath + "/" + carpeta;
+        string fullPath = Application.dataPath + "/Data/" + carpeta;
         //bool para verificar si existe la ruta
         bool checkFolderExit = Directory.Exists(fullPath);
         if (checkFolderExit == false)
@@ -97,7 +97,7 @@ public class SaveLoadKuka : MonoBehaviour
     public static T LoadData<T>(string fileName)
     {
         //Se crea la dirección del archivo
-        string fullPath = Application.dataPath + "/" + carpeta + fileName + ".json";
+        string fullPath = Application.dataPath + "/Data/" + carpeta + fileName + ".json";
         //Se verifica si existe
         if (File.Exists(fullPath))
         {
