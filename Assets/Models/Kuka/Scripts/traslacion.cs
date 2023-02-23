@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class traslacion : MonoBehaviour
+public class Traslacion : MonoBehaviour
 {
-    public GameObject cubito;
+    public GameObject objetoConectado;
     public Vector3 componente;
     public float x, y, z;
 
@@ -12,7 +12,7 @@ public class traslacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        componente = cubito.GetComponent<Transform>().eulerAngles;
+        componente = objetoConectado.GetComponent<Transform>().eulerAngles;
         x = GetObjectRotationX();
         y = GetObjectRotationY();
         z = GetObjectRotationZ();
