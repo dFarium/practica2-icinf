@@ -4596,8 +4596,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
+      - m_Target: {fileID: 3003191887142252634}
+        m_TargetAssemblyTypeName: SaveLoadKuka, Assembly-CSharp
         m_MethodName: LoadButtonData
         m_Mode: 1
         m_Arguments:
@@ -4729,8 +4729,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
+      - m_Target: {fileID: 3003191887142252634}
+        m_TargetAssemblyTypeName: SaveLoadKuka, Assembly-CSharp
         m_MethodName: SaveButtonData
         m_Mode: 1
         m_Arguments:
@@ -5792,7 +5792,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081446832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2081446832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6331,4 +6343,11 @@ MonoBehaviour:
   numeroSave: {fileID: 1413280269}
   numeroLoad: {fileID: 1697459535}
   piezas: {fileID: 0}
+  BF: {fileID: 259739715}
+  BM: {fileID: 1930015136}
+  B1: {fileID: 1504771477}
+  B2: {fileID: 717247793}
+  M1: {fileID: 610599490}
+  M2: {fileID: 2101680509}
+  MA: {fileID: 668722558}
   namefileData: ' '

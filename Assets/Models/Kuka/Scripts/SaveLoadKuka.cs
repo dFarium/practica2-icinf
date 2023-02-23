@@ -12,6 +12,9 @@ public class SaveLoadKuka : MonoBehaviour
     //Se creara un object que guarde los datos relevantes de las piezas
     public Datos_Guardados piezas; //reemplazado por Data data
 
+    //Se adjuntan en Unity todas las piezas conectadas
+    public GameObject BF, BM, B1, B2, M1, M2, MA;
+
     //Carpeta en la que se encuentran los archivos de guardado
     public const string carpeta = "Kuka-Data/";
     //El nombre con el cual se crearan los archivos json
@@ -43,10 +46,13 @@ public class SaveLoadKuka : MonoBehaviour
         namefileData = "Posicion " + numeroGuardado;
 
         //Guarda todas las rotaciones de todas las piezas del kuka
-        piezas.BaseFija = GameObject.FindGameObjectWithTag("K-BaseFija").transform.rotation;
-        piezas.BaseMovil = GameObject.FindGameObjectWithTag("K-BaseMovil").transform.rotation;
-        piezas.Brazo1 = GameObject.FindGameObjectWithTag("K-Brazo1").transform.rotation;
-
+        piezas.BaseFija = BF.GetComponent<Transform>().rotation;
+        piezas.BaseMovil = BM.GetComponent<Transform>().rotation;
+        piezas.Brazo1 = B1.GetComponent<Transform>().rotation;
+        piezas.Brazo2 = B2.GetComponent<Transform>().rotation;
+        piezas.Muneca1 = M1.GetComponent<Transform>().rotation;
+        piezas.Muneca2 = M2.GetComponent<Transform>().rotation;
+        piezas.Mano = MA.GetComponent<Transform>().rotation;
         //ejecuta la funcion SaveData para guardar los datos
         SaveData(piezas, namefileData);
     }
@@ -54,7 +60,7 @@ public class SaveLoadKuka : MonoBehaviour
     public void cargarDatos(int numeroGuardado)
     {
         //Se crea una variable para ver si existe o no 
-        var dataFound = LoadData<Datos_Guardados>("Guardado " + numeroGuardado);
+        var dataFound = LoadData<Datos_Guardados>("Posicion " + numeroGuardado);
         if (dataFound != null)
         {
             //Si existe, llena data con los archivos encontrados
@@ -63,15 +69,19 @@ public class SaveLoadKuka : MonoBehaviour
         else
         {
             //Si no existe, crea un archivo json con los datos actuales del brazo robot
-            namefileData = "Guardado ";
+            namefileData = "Posicion ";
             piezas= new Datos_Guardados();
             guardarDatos(numeroGuardado);
         }
-        
+
         //A continuacion se cargan datos de rotacion de cada pieza del kuka
-        /*
-            AAAAAAAAAAAAAAA
-         */
+        BF.GetComponent<Transform>().rotation = piezas.BaseFija;
+        BM.GetComponent<Transform>().rotation = piezas.BaseMovil;
+        B1.GetComponent<Transform>().rotation = piezas.Brazo1;
+        B2.GetComponent<Transform>().rotation = piezas.Brazo2;
+        M1.GetComponent<Transform>().rotation = piezas.Muneca1;
+        M2.GetComponent<Transform>().rotation = piezas.Muneca2;
+        MA.GetComponent<Transform>().rotation = piezas.Mano;
     }
 
     public static void SaveData<T>(T data, string fileName)
@@ -115,5 +125,17 @@ public class SaveLoadKuka : MonoBehaviour
             Debug.Log(fileName + " NO ENCONTRADO");
             return default;
         }
+    }
+
+    public void LoadButtonData()
+    {
+        //Ejecuta la funcion loadData, obteniendo el numero de Canvas
+        cargarDatos(numeroLoad.numeroLoad);
+    }
+
+    public void SaveButtonData()
+    {
+        //Ejecuta la funcion guardarData, obteniendo el numero de Canvas
+        guardarDatos(numeroSave.numeroSave);
     }
 }
