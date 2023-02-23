@@ -19,6 +19,13 @@ TagManager:
   - Slider
   - VelocidadText
   - Secuenciador
+  - K-BaseFija
+  - K-BaseMovil
+  - K-Brazo1
+  - K-Brazo2
+  - K-Muneca1
+  - K-Muneca2
+  - K-Mano
   layers:
   - Default
   - TransparentFX
