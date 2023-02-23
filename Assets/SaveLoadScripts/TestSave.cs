@@ -35,7 +35,7 @@ public class TestSave : MonoBehaviour
     private void Start()
     {
         //Se crea una variable para ver si existe o no el "Guardado 0"
-        var dataFound = SaveLoadSystemData.LoadData<Data>(pathData, namefileData+0);
+        var dataFound = SaveLoadSystemData.LoadData<Data>(pathData, "Guardado 0");
         if (dataFound != null)
         {
             //Si existe, llena data con los archivos encontrados
