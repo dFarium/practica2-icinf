@@ -26,6 +26,8 @@ TagManager:
   - K-Muneca1
   - K-Muneca2
   - K-Mano
+  - ModoPlay
+  - ModoPausa
   layers:
   - Default
   - TransparentFX
