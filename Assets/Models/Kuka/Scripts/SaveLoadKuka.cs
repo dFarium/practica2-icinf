@@ -10,7 +10,7 @@ public class SaveLoadKuka : MonoBehaviour
     public NumeroVariable numeroLoad;
 
     //Se creara un object que guarde los datos relevantes de las piezas
-    public Datos_Guardados piezas; //reemplazado por Data data
+    public Datos_Guardados piezas;
 
     //Se adjuntan en Unity todas las piezas conectadas
     public GameObject BF, BM, B1, B2, M1, M2, MA;
