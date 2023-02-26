@@ -4,26 +4,44 @@ using UnityEngine;
 
 public class WarningColision : MonoBehaviour
 {
-    public MeshCollider[] robot;
     public CanvasGroup grupo;
-    // Start is called before the first frame update
-    void Start()
+    public int tolerancia;
+    public int colisiones = 0;
+    public TextoColision texto;
+    public int indice;
+    public string nombre;
+
+
+    private void Start()
     {
-        robot = GetComponentsInChildren<MeshCollider>();
+        nombre = gameObject.name;
+        Debug.Log(nombre);
     }
-
-    // Update is called once per frame
-    void Update()
-
+    private void OnTriggerStay(Collider other)
     {
-    }
+        if (nombre == "Hombro" && other.name == "Brazo") return;
+        if (nombre == "Brazo" && other.name == "Hombro") return;
+        if (nombre == "Brazo" && other.name == "Antebrazo") return;
+        if (nombre == "Antebrazo" && other.name == "Brazo") return;
+        if (nombre == "Antebrazo" && other.name == "Mano") return;
+        if (nombre == "Mano" && other.name == "Antebrazo") return;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.name + " ESTA COLISIONANDO");
-        grupo.alpha = 1;
-        grupo.interactable = true;
-        grupo.blocksRaycasts = true;
+        if (colisiones > tolerancia)
+        {
+            if(other.tag != "Objeto")
+            {
+                //Debug.Log(other.tag);
+                //Debug.Log(other.name + " ESTA COLISIONANDO");
+                grupo.alpha = 1;
+                grupo.interactable = true;
+                grupo.blocksRaycasts = true;
+                indice = texto.addToLista(other.name + " ("+ nombre +")");
+            } 
+        }
+        else
+        {
+            colisiones++;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -31,5 +49,7 @@ public class WarningColision : MonoBehaviour
         grupo.alpha = 0;
         grupo.interactable = false;
         grupo.blocksRaycasts = false;
+        indice = texto.removerOfLista(other.name + " (" + nombre + ")");
     }
+    
 }
