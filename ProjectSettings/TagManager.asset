@@ -28,6 +28,7 @@ TagManager:
   - K-Mano
   - ModoPlay
   - ModoPausa
+  - IgnorarColision
   layers:
   - Default
   - TransparentFX
