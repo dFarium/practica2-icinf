@@ -2228,8 +2228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numeroSave: 0
-  numeroLoad: 1
-  numeroDir: 0
+  numeroLoad: 0
+  numeroDir: 1
   numSave: {fileID: 0}
   numLoad: {fileID: 0}
   numDir: {fileID: 770433202}
@@ -7686,14 +7686,9 @@ MonoBehaviour:
   M1: {fileID: 431615589011825423}
   M2: {fileID: 4514082502794574993}
   MA: {fileID: 6641470195691183918}
+  debug1: 0
+  debug2: 0
   flagStart: 0
-  F_BF: 0
-  F_BM: 0
-  F_B1: 0
-  F_B2: 0
-  F_M1: 0
-  F_M2: 0
-  F_MA: 0
 --- !u!4 &1192096627603393591
 Transform:
   m_ObjectHideFlags: 0
