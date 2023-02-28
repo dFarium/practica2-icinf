@@ -15,6 +15,7 @@ public class WarningColision : MonoBehaviour
     private void Start()
     {
         nombre = gameObject.name;
+        tag = gameObject.tag;
         Debug.Log(nombre);
     }
     private void OnTriggerStay(Collider other)
@@ -25,6 +26,8 @@ public class WarningColision : MonoBehaviour
         if (nombre == "Antebrazo" && other.name == "Brazo") return;
         if (nombre == "Antebrazo" && other.name == "Mano") return;
         if (nombre == "Mano" && other.name == "Antebrazo") return;
+
+        if (tag == "IgnorarColision" && other.tag == "Cubo 1") return;
 
         if (colisiones > tolerancia)
         {
