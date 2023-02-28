@@ -42,7 +42,7 @@ public class PickUpObject : MonoBehaviour
                     PickedObject = ObjectToPickUp;//Se le asigna el objeto
                     PickedObject.GetComponent<pickupable>().isPickable = false; //El objeto ya no es identificado como un objeto que se puede tomar
                     PickedObject.transform.SetParent(interactionZones);//El objeto se vuelve hijo de la zona de interaccion
-                    PickedObject.transform.position = interactionZones.position;//El objeto se transporta a la zona de interaccion, para que quede centrado
+                    //PickedObject.transform.position = interactionZones.position;//El objeto se transporta a la zona de interaccion, para que quede centrado
                     PickedObject.GetComponent<Rigidbody>().useGravity = false;// El objeto ya no usa gravedad, para evitar que el robot se vuelta loco
                     PickedObject.GetComponent<Rigidbody>().isKinematic = true;// El objeto se vuelve kinematico para poder atravesar objetos 
             }
