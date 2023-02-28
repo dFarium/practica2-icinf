@@ -31,7 +31,7 @@ public class NumeroVariable : MonoBehaviour
     }
 
     public void disminuirLoad(){
-        if (numeroLoad>1){
+        if (numeroLoad>0){
             numeroLoad = numeroLoad-1;
             numLoad.text = numeroLoad.ToString();
         }
@@ -45,7 +45,7 @@ public class NumeroVariable : MonoBehaviour
 
     public void disminuirDir()
     {
-        if (numeroDir > 1)
+        if (numeroDir > 0)
         {
             numeroDir = numeroDir - 1;
             numDir.text = numeroDir.ToString();
