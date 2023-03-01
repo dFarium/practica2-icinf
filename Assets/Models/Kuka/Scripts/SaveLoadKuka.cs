@@ -116,7 +116,7 @@ public class SaveLoadKuka : MonoBehaviour
             //De Json a un Obj que Unity entiende
             var obj = JsonUtility.FromJson<T>(textJson);
             //Mensaje para comprobar que el programa no tuvo errores
-            Debug.Log(fileName + "ROTACIONES KUKA CARGADAS EXITOSAMENTE");
+            Debug.Log(fileName + " ROTACIONES KUKA CARGADAS EXITOSAMENTE");
             return obj;
         }
         else
