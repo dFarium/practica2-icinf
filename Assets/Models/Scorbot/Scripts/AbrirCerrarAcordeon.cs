@@ -9,8 +9,9 @@ public class AbrirCerrarAcordeon : MonoBehaviour
     public Text textoBoton;
     public bool boton;
     public CanvasGroup corto,full;
-    // Start is called before the first frame update
+    
 
+    //Muesta o oculta la version corta o extendida de las colisiones actuales
     public void abrirCerrar()
     {
         if (boton)
