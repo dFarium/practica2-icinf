@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/!Scenes/Scorbot_Riel.unity
     guid: b73cab09e63843a44bda917d620624ae
+  - enabled: 1
+    path: Assets/!Scenes/Scorbot.unity
+    guid: 4a329ae248924dc4881954bb71cebabd
   m_configObjects: {}
