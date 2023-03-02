@@ -13,13 +13,15 @@ public class AnimacionTraslado : MonoBehaviour
     //Se adjuntan en Unity todas las piezas conectadas
     public GameObject BF, BM, B1, B2, M1, M2, MA;
 
+    public Vector3 D_BF, D_BM, D_B1, D_B2, D_M1, D_M2, D_MA;
+
     public float debug1, debug2;
 
     public Vector3 recorrido , finalidad ,debug4;
 
     public Quaternion origen;
 
-    public float speed=10;
+    public float speed=1, tolerancia;
 
     //los distintos flags que se usarán para ir de una parte a otra
     public int flagStart=0;
@@ -58,12 +60,13 @@ public class AnimacionTraslado : MonoBehaviour
 
     public void Update()
     {
+
         switch (flagStart)
         {
             //Se mueve la base
             case 1:
                 debug4 = BM.GetComponent<Transform>().rotation.eulerAngles;
-                calcular(BM.GetComponent<Transform>().rotation.eulerAngles.y, destino.BaseMovil.eulerAngles.y, 2, BM.GetComponent<Transform>(), B1.GetComponent<Transform>(), 190, recorrido.z, new Vector3(0f, 0f, speed), destino.BaseMovil, 0f,0f);
+                calcular(BM.GetComponent<Transform>().rotation.eulerAngles.y, destino.BaseMovil.eulerAngles.y, 2, BM.GetComponent<Transform>(), B1.GetComponent<Transform>(), 190, recorrido.z, new Vector3(0f, 0f, speed), destino.BaseMovil, 0f, 0f);
                 break;
             //Se mueve brazo 1
             case 2:
@@ -78,7 +81,7 @@ public class AnimacionTraslado : MonoBehaviour
             //Se mueve muneca 1
             case 4:
                 debug4 = M1.GetComponent<Transform>().rotation.eulerAngles;
-                calcular(M1.GetComponent<Transform>().rotation.eulerAngles.y, destino.Muneca1.eulerAngles.y, 5, M1.GetComponent<Transform>(), M2.GetComponent<Transform>(), 360, recorrido.x, new Vector3(speed, 0f, 0f), destino.Muneca1,0f,0f);
+                calcular(M1.GetComponent<Transform>().rotation.eulerAngles.y, destino.Muneca1.eulerAngles.y, 5, M1.GetComponent<Transform>(), M2.GetComponent<Transform>(), 360, recorrido.x, new Vector3(speed, 0f, 0f), destino.Muneca1, 0f, 0f);
                 break;
             //Se mueve muneca 2
             case 5:
@@ -89,7 +92,7 @@ public class AnimacionTraslado : MonoBehaviour
             case 6:
                 debug4 = MA.GetComponent<Transform>().rotation.eulerAngles;
                 finalidad = destino.Mano.eulerAngles;
-                calcular(MA.GetComponent<Transform>().rotation.eulerAngles.y, destino.Mano.eulerAngles.y, 0, MA.GetComponent<Transform>(), BM.GetComponent<Transform>(), 190, recorrido.x, new Vector3(speed, 0f, 0f), destino.Mano,0,0);
+                calcular(MA.GetComponent<Transform>().rotation.eulerAngles.y, destino.Mano.eulerAngles.y, 0, MA.GetComponent<Transform>(), BM.GetComponent<Transform>(), 190, recorrido.x, new Vector3(speed, 0f, 0f), destino.Mano, 0, 0);
                 break;
             default:
                 break;
@@ -102,7 +105,7 @@ public class AnimacionTraslado : MonoBehaviour
     {
         debug1 = puntoInicio;
         debug2 = puntoFin;
-        if ( (puntoInicio < (puntoFin + 0.1) && puntoInicio > (puntoFin - 0.1)) && (verificadorInicio < (verificadorFin + 40) && verificadorInicio > (verificadorFin - 40)))
+        if ( (puntoInicio < (puntoFin + tolerancia) && puntoInicio > (puntoFin - tolerancia)) && (verificadorInicio < (verificadorFin + 40) && verificadorInicio > (verificadorFin - 40)))
         {
             return true;
         }
@@ -121,8 +124,10 @@ public class AnimacionTraslado : MonoBehaviour
         {
             if (distancia > -rangoMax && distancia < rangoMax)
             {
-                objeto1.Rotate(vectorMove * Time.deltaTime);
-                recorrido = vectorMove * Time.deltaTime + recorrido;
+                //objeto1.Rotate(vectorMove * Time.deltaTime);
+                objeto1.Rotate(vectorMove );
+                //recorrido = vectorMove * Time.deltaTime + recorrido;
+                recorrido = vectorMove + recorrido;
             }
             else
             {
@@ -135,3 +140,4 @@ public class AnimacionTraslado : MonoBehaviour
 
 
 }
+
