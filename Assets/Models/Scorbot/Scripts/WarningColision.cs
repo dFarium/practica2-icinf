@@ -6,24 +6,25 @@ public class WarningColision : MonoBehaviour
 {
     public CanvasGroup grupo;
     public TextoColision texto;
-    public int indice;
+    private int indice;
     private string nombre;
-    public GameObject modelo;
+    private string robot;
 
 
     //Se obtiene el nombre del gameobject al cual esta asociado el script
     private void Start()
     {
+        //Se obtienen los nombres y tags del objeto que tiene el script, ademas nombre del objeto raiz
         nombre = gameObject.name;
         tag = gameObject.tag;
-        Debug.Log(nombre);
+        robot = transform.root.name;
     }
 
     //Se ejecuta mientras colisionen objetos
     private void OnTriggerStay(Collider other)
     {
         //Ignorar colision entre mismo scorbot
-        if (modelo.name == "Scorbot")
+        if (robot == "Scorbot")
         {
             if (nombre == "Hombro" && other.name == "Brazo") return;
             if (nombre == "Brazo" && other.name == "Hombro") return;
@@ -34,7 +35,7 @@ public class WarningColision : MonoBehaviour
         }
         
         //Ignorar colision entre mismo kuka
-        if (modelo.name == "kuka")
+        if (robot == "kuka")
         {
             if (nombre == "BaseFija" && other.name == "MesaKuka") return;
             if (nombre == "MesaKuka" && other.name == "BaseFija") return;
