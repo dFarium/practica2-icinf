@@ -46,7 +46,7 @@ public class AnimacionTraslado : MonoBehaviour
             D_M1 = new Vector3(0f, 0f, 0f); 
             D_M2 = new Vector3(0f, 0f, 0f);
             D_MA = new Vector3(0f, 0f, 0f);
-            origen = F_BM.GetComponent<Transform>().rotation;
+            origen = R_BM.GetComponent<Transform>().rotation;
             flagError = 0;
             flagAbort = 0;
             speedInicial = speed;
@@ -84,27 +84,32 @@ public class AnimacionTraslado : MonoBehaviour
             {
                 //Se mueve la base
                 case 1:
-                    calcular(F_BM.GetComponent<Transform>().rotation.eulerAngles.y, destino.BaseMovil.eulerAngles.y, 2, F_BM.GetComponent<Transform>(), F_B1.GetComponent<Transform>(), 190, D_BM.z, new Vector3(0f, 0f, speed), destino.BaseMovil, 0f, 0f);
+                    calcular(F_BM.GetComponent<Transform>().rotation.eulerAngles.y, destino.BaseMovil.eulerAngles.y, 2, F_BM.GetComponent<Transform>(), R_B1.GetComponent<Transform>(), 190, D_BM.z, new Vector3(0f, 0f, speed), destino.BaseMovil, 0f, 0f);
+                    F_B1.GetComponent<Transform>().rotation = R_B1.GetComponent<Transform>().rotation;
                     break;
                 //Se mueve brazo 1
                 case 2:
-                    calcular(F_B1.GetComponent<Transform>().rotation.eulerAngles.x, destino.Brazo1.eulerAngles.x, 3, F_B1.GetComponent<Transform>(), F_B2.GetComponent<Transform>(), 200, D_B1.y, new Vector3(0f, speed, 0f), destino.Brazo1, F_B1.GetComponent<Transform>().rotation.eulerAngles.z, destino.Brazo1.eulerAngles.z);
+                    calcular(F_B1.GetComponent<Transform>().rotation.eulerAngles.x, destino.Brazo1.eulerAngles.x, 3, F_B1.GetComponent<Transform>(), R_B2.GetComponent<Transform>(), 200, D_B1.y, new Vector3(0f, speed, 0f), destino.Brazo1, F_B1.GetComponent<Transform>().rotation.eulerAngles.z, destino.Brazo1.eulerAngles.z);
+                    F_B2.GetComponent<Transform>().rotation = R_B2.GetComponent<Transform>().rotation;
                     break;
                 //Se mueve brazo 2
                 case 3:
-                    calcular(F_B2.GetComponent<Transform>().rotation.eulerAngles.x, destino.Brazo2.eulerAngles.x, 4, F_B2.GetComponent<Transform>(), F_M1.GetComponent<Transform>(), 270, D_B2.y, new Vector3(0f, speed, 0f), destino.Brazo2, F_B2.GetComponent<Transform>().rotation.eulerAngles.z, destino.Brazo2.eulerAngles.z);
+                    calcular(F_B2.GetComponent<Transform>().rotation.eulerAngles.x, destino.Brazo2.eulerAngles.x, 4, F_B2.GetComponent<Transform>(), R_M1.GetComponent<Transform>(), 270, D_B2.y, new Vector3(0f, speed, 0f), destino.Brazo2, F_B2.GetComponent<Transform>().rotation.eulerAngles.z, destino.Brazo2.eulerAngles.z);
+                    F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
                     break;
                 //Se mueve muneca 1
                 case 4:
-                    calcular(F_M1.GetComponent<Transform>().rotation.eulerAngles.y, destino.Muneca1.eulerAngles.y, 5, F_M1.GetComponent<Transform>(), F_M2.GetComponent<Transform>(), 360, D_M1.x, new Vector3(speed, 0f, 0f), destino.Muneca1, 0f, 0f);
+                    calcular(F_M1.GetComponent<Transform>().rotation.eulerAngles.y, destino.Muneca1.eulerAngles.y, 5, F_M1.GetComponent<Transform>(), R_M2.GetComponent<Transform>(), 360, D_M1.x, new Vector3(speed, 0f, 0f), destino.Muneca1, 0f, 0f);
+                    F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
                     break;
                 //Se mueve muneca 2
                 case 5:
-                    calcular(F_M2.GetComponent<Transform>().rotation.eulerAngles.x, destino.Muneca2.eulerAngles.x, 6, F_M2.GetComponent<Transform>(), F_MA.GetComponent<Transform>(), 235, D_M2.y, new Vector3(0f, speed, 0f), destino.Muneca2, F_M2.GetComponent<Transform>().rotation.eulerAngles.z, destino.Muneca2.eulerAngles.z);
+                    calcular(F_M2.GetComponent<Transform>().rotation.eulerAngles.x, destino.Muneca2.eulerAngles.x, 6, F_M2.GetComponent<Transform>(), R_MA.GetComponent<Transform>(), 235, D_M2.y, new Vector3(0f, speed, 0f), destino.Muneca2, F_M2.GetComponent<Transform>().rotation.eulerAngles.z, destino.Muneca2.eulerAngles.z);
+                    F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
                     break;
                 //Se mueve mano
                 case 6:
-                    calcular(F_MA.GetComponent<Transform>().rotation.eulerAngles.y, destino.Mano.eulerAngles.y, 7, F_MA.GetComponent<Transform>(), F_BM.GetComponent<Transform>(), 190, D_MA.x, new Vector3(speed, 0f, 0f), destino.Mano, 0, 0);
+                    calcular(F_MA.GetComponent<Transform>().rotation.eulerAngles.y, destino.Mano.eulerAngles.y, 7, F_MA.GetComponent<Transform>(), R_BM.GetComponent<Transform>(), 190, D_MA.x, new Vector3(speed, 0f, 0f), destino.Mano, 0, 0);
                     break;
                 default:
                     break;
