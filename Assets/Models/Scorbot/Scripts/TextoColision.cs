@@ -9,6 +9,8 @@ public class TextoColision : MonoBehaviour
     public Text textoshort;
     public List<string> lista = new List<string>();
     
+
+    //Se añade a lista el objeto que colisiona, se salta el paso si ya esta en la lista
     public int addToLista(string objeto)
     {
         string textofinal= "";
@@ -27,6 +29,7 @@ public class TextoColision : MonoBehaviour
         return lista.IndexOf(objeto);
     }
 
+    //Se quita de la lista el objeto que colisiona, se salta el paso si no existe
     public int removerOfLista(string objeto)
     {
         string textofinal = "";
@@ -45,6 +48,7 @@ public class TextoColision : MonoBehaviour
         return -1;
     }
 
+    //Uptadea la lista cerrada dependiendo si existen colisiones o no 
     private void Update()
     {
         if(lista.Count == 0)

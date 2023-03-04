@@ -5,12 +5,14 @@ using UnityEngine;
 public class ComportamientoReal : MonoBehaviour
 {
     public Component[] rigidArray;
-    // Start is called before the first frame update
+
+    //Obtener todos los componentes rigidbody del robot
     void Start()
     {
         rigidArray = GetComponentsInChildren<Rigidbody>();
     }
 
+    //Quitar restricciones de rotacion todos los rigidbody del robot (Congelaciones dadas en Rotaciones.cs)
     public void DescongelarRobot()
     {
         foreach (Rigidbody r in rigidArray)
