@@ -889,11 +889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &695002995449436195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,11 +1008,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 0}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 0}
   indice: 0
-  nombre: 
+  modelo: {fileID: 0}
 --- !u!1 &1712633542278390653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,11 +1158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 1
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!114 &1773572877819806382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,11 +1417,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 2
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!54 &2332360541269071078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1766,11 +1758,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &3566277576421096758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,11 +1845,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!33 &4231848714764852916
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11360,11 +11348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 1
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!23 &5080588266591460345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11420,11 +11406,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &5292098328197240114
 GameObject:
   m_ObjectHideFlags: 0
@@ -11550,11 +11534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &6648101672388512207
 GameObject:
   m_ObjectHideFlags: 0
@@ -11708,11 +11690,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 0
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &8407588205790569420
 GameObject:
   m_ObjectHideFlags: 0
@@ -11782,11 +11762,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
-  tolerancia: 3
-  colisiones: 0
   texto: {fileID: 4822957950274383586}
   indice: 0
-  nombre: 
+  modelo: {fileID: 1712633542278390653}
 --- !u!1 &8953190384147358993
 GameObject:
   m_ObjectHideFlags: 0
