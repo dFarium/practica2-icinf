@@ -750,6 +750,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1936960516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936960517}
+  m_Layer: 0
+  m_Name: Creador de Secuencias
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936960517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936960516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -276.93124, y: -300.8, z: 0}
+  m_LocalScale: {x: 1.7877096, y: 1.7877096, z: 1.7877096}
+  m_Children:
+  - {fileID: 4822957949938778706}
+  - {fileID: 4822957949126877849}
+  m_Father: {fileID: 4822957949421815190}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &158591762710343393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1018,8 +1050,8 @@ GameObject:
   - component: {fileID: 2058056576590969287}
   - component: {fileID: 1712633542278390642}
   - component: {fileID: 1712633542278390643}
-  - component: {fileID: 1712633542278390654}
   - component: {fileID: 1712633542278390655}
+  - component: {fileID: 1712633542278390654}
   m_Layer: 0
   m_Name: Scorbot
   m_TagString: Untagged
@@ -1036,12 +1068,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712633542278390653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447e383f8512dd14e927a5ca40f0c523, type: 3}
+  m_Script: {fileID: 11500000, guid: 299699efba2a7c444bb04bcbae2fd3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   numeroSave: {fileID: 4822957949205969894}
   numeroLoad: {fileID: 4822957949113459777}
   piezas:
+    PosRobot: {x: 0, y: 0, z: 0}
     Base: {x: 0, y: 0, z: 0, w: 0}
     Hombro: {x: 0, y: 0, z: 0, w: 0}
     Brazo: {x: 0, y: 0, z: 0, w: 0}
@@ -1055,8 +1088,9 @@ MonoBehaviour:
   BR: {fileID: 2332360541269071072}
   AB: {fileID: 1773572877819806379}
   CM: {fileID: 4822957950359400561}
-  MA: {fileID: 0}
-  CUBO: {fileID: 0}
+  MA: {fileID: 4822957950597238173}
+  CUBO: {fileID: 4822957949606302464}
+  Robot: {fileID: 1712633542278390653}
   namefileData: 'scorbot '
 --- !u!114 &1712633542278390655
 MonoBehaviour:
@@ -3566,15 +3600,15 @@ RectTransform:
   m_GameObject: {fileID: 4822957949126877848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.559375, y: 0.559375, z: 0.559375}
   m_Children:
   - {fileID: 4822957949212672365}
-  m_Father: {fileID: 4822957949421815190}
-  m_RootOrder: 11
+  m_Father: {fileID: 1936960517}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -229, y: -231.26736}
+  m_AnchoredPosition: {x: -1.1571808, y: -152.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4822957949126877852
@@ -4919,21 +4953,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
-        m_MethodName: resetObjeto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PickUpObject, Assembly-CSharp
-        m_MethodName: resetPick
+      - m_Target: {fileID: 1712633542278390654}
+        m_TargetAssemblyTypeName: SaveLoadScorbotRiel, Assembly-CSharp
+        m_MethodName: cargarCubo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5191,8 +5213,7 @@ RectTransform:
   - {fileID: 4822957949380779720}
   - {fileID: 4822957950385916012}
   - {fileID: 4822957949085089103}
-  - {fileID: 4822957949938778706}
-  - {fileID: 4822957949126877849}
+  - {fileID: 1936960517}
   - {fileID: 4822957950274383592}
   - {fileID: 4822957949727801495}
   m_Father: {fileID: 4822957948914522773}
@@ -6594,7 +6615,7 @@ RectTransform:
   m_Children:
   - {fileID: 4822957948914246699}
   m_Father: {fileID: 4822957949421815190}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7444,16 +7465,16 @@ RectTransform:
   m_GameObject: {fileID: 4822957949938778717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.559375, y: 0.559375, z: 0.559375}
   m_Children:
   - {fileID: 4822957949679812475}
   - {fileID: 4822957949433033319}
-  m_Father: {fileID: 4822957949421815190}
-  m_RootOrder: 10
+  m_Father: {fileID: 1936960517}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -229, y: -268.16733}
+  m_AnchoredPosition: {x: -1.1571808, y: -173.24092}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4822957949938778707
@@ -8417,7 +8438,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712633542278390654}
-        m_TargetAssemblyTypeName: SaveLoadScorbot, Assembly-CSharp
+        m_TargetAssemblyTypeName: SaveLoadScorbotRiel, Assembly-CSharp
         m_MethodName: LoadButtonData
         m_Mode: 1
         m_Arguments:
@@ -8764,7 +8785,7 @@ RectTransform:
   - {fileID: 4822957948685024359}
   - {fileID: 4822957949253374732}
   m_Father: {fileID: 4822957949421815190}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -10229,10 +10250,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
-        m_MethodName: reset
-        m_Mode: 1
+      - m_Target: {fileID: 1712633542278390654}
+        m_TargetAssemblyTypeName: SaveLoadScorbotRiel, Assembly-CSharp
+        m_MethodName: cargarDatos
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10903,7 +10924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712633542278390654}
-        m_TargetAssemblyTypeName: SaveLoadScorbot, Assembly-CSharp
+        m_TargetAssemblyTypeName: SaveLoadScorbotRiel, Assembly-CSharp
         m_MethodName: SaveButtonData
         m_Mode: 1
         m_Arguments:
