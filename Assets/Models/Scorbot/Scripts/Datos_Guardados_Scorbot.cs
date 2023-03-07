@@ -12,4 +12,6 @@ public class Datos_Guardados_Scorbot
     public Quaternion Antebrazo;
     public Quaternion ConjuntoMano;
     public Quaternion mano;
+    public Quaternion cubo;
+    public Vector3 PosCubo;
 }
