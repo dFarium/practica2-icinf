@@ -890,8 +890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &695002995449436195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,8 +1007,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 0}
   texto: {fileID: 0}
-  indice: 0
-  modelo: {fileID: 0}
 --- !u!1 &1712633542278390653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,11 +1047,16 @@ MonoBehaviour:
     Brazo: {x: 0, y: 0, z: 0, w: 0}
     Antebrazo: {x: 0, y: 0, z: 0, w: 0}
     ConjuntoMano: {x: 0, y: 0, z: 0, w: 0}
+    mano: {x: 0, y: 0, z: 0, w: 0}
+    cubo: {x: 0, y: 0, z: 0, w: 0}
+    PosCubo: {x: 0, y: 0, z: 0}
   BF: {fileID: 3566277576421096758}
   HM: {fileID: 8953190384147358993}
   BR: {fileID: 2332360541269071072}
   AB: {fileID: 1773572877819806379}
   CM: {fileID: 4822957950359400561}
+  MA: {fileID: 0}
+  CUBO: {fileID: 0}
   namefileData: 'scorbot '
 --- !u!114 &1712633542278390655
 MonoBehaviour:
@@ -1082,7 +1083,7 @@ HingeJoint:
   m_Anchor: {x: -20.05, y: -0.1, z: 3.95}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -338.5012, y: -58.71732, z: -231.63449}
+  m_ConnectedAnchor: {x: -338.50116, y: -58.717316, z: -231.63449}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1159,8 +1160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!114 &1773572877819806382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,8 +1417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!54 &2332360541269071078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1558,13 +1555,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3268323256808469503}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0.4003717, y: 0.5960765, z: 0.06253139, w: -0.69317037}
+  m_LocalPosition: {x: 11.36, y: 24.85, z: -19.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.718, y: 267.961, z: -40.023}
 --- !u!1 &3268323256808469503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,8 +1756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &3566277576421096758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,8 +1841,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!33 &4231848714764852916
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11349,8 +11342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!23 &5080588266591460345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11407,8 +11398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &5292098328197240114
 GameObject:
   m_ObjectHideFlags: 0
@@ -11535,8 +11524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &6648101672388512207
 GameObject:
   m_ObjectHideFlags: 0
@@ -11691,8 +11678,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &8407588205790569420
 GameObject:
   m_ObjectHideFlags: 0
@@ -11763,8 +11748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grupo: {fileID: 4822957949727801493}
   texto: {fileID: 4822957950274383586}
-  indice: 0
-  modelo: {fileID: 1712633542278390653}
 --- !u!1 &8953190384147358993
 GameObject:
   m_ObjectHideFlags: 0
