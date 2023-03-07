@@ -13,7 +13,7 @@ public class SaveLoadScorbot : MonoBehaviour
     public Datos_Guardados_Scorbot piezas;
 
     //Se adjuntan en Unity todas las piezas conectadas
-    public GameObject BF, HM, BR, AB, CM, MA;
+    public GameObject BF, HM, BR, AB, CM, MA, CUBO;
 
     //Carpeta en la que se encuentran los archivos de guardado
     public const string carpeta = "Scorbot-Data/";
@@ -52,6 +52,8 @@ public class SaveLoadScorbot : MonoBehaviour
         piezas.Antebrazo = AB.GetComponent<Transform>().rotation;
         piezas.ConjuntoMano = CM.GetComponent<Transform>().rotation;
         piezas.mano= MA.GetComponent<Transform>().rotation;
+        piezas.cubo = CUBO.GetComponent<Transform>().rotation;
+        piezas.PosCubo= CUBO.GetComponent<Transform>().position;
         //ejecuta la funcion SaveData para guardar los datos
         SaveData(piezas, namefileData);
     }
@@ -80,6 +82,30 @@ public class SaveLoadScorbot : MonoBehaviour
         AB.GetComponent<Transform>().rotation = piezas.Antebrazo;
         CM.GetComponent<Transform>().rotation = piezas.ConjuntoMano;
         MA.GetComponent<Transform>().rotation = piezas.mano;
+        CUBO.GetComponent<Transform>().rotation = piezas.cubo;
+        CUBO.GetComponent<Transform>().position = piezas.PosCubo;
+    }
+
+    public void cargarCubo()
+    {
+        //Se crea una variable para ver si existe o no 
+        var dataFound = LoadData<Datos_Guardados_Scorbot>("scorbot 0");
+        if (dataFound != null)
+        {
+            //Si existe, llena data con los archivos encontrados
+            piezas = dataFound;
+        }
+        else
+        {
+            //Si no existe, crea un archivo json con los datos actuales del cubo
+            namefileData = "scorbot ";
+            piezas = new Datos_Guardados_Scorbot();
+            guardarDatos(0);
+        }
+
+        //A continuacion se cargan los datos del cubo
+        CUBO.GetComponent<Transform>().rotation = piezas.cubo;
+        CUBO.GetComponent<Transform>().position = piezas.PosCubo;
     }
 
     public static void SaveData<T>(T data, string fileName)
@@ -114,7 +140,7 @@ public class SaveLoadScorbot : MonoBehaviour
             //De Json a un Obj que Unity entiende
             var obj = JsonUtility.FromJson<T>(textJson);
             //Mensaje para comprobar que el programa no tuvo errores
-            Debug.Log(fileName + "ROTACIONES SCORBOT CARGADAS EXITOSAMENTE");
+            Debug.Log(fileName + " ROTACIONES SCORBOT CARGADAS EXITOSAMENTE");
             return obj;
         }
         else
@@ -137,3 +163,4 @@ public class SaveLoadScorbot : MonoBehaviour
         guardarDatos(numeroSave.numeroSave);
     }
 }
+
