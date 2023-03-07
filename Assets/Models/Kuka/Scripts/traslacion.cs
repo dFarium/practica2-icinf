@@ -59,14 +59,19 @@ public class Traslacion : MonoBehaviour
         flagAnimacion = 0;
     }
 
+    IEnumerator Espera()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
     IEnumerator CalcularDistancia()
     {
-        D_BM = R_BM.GetComponent<Transform>().localEulerAngles.y - destino.BaseMovil.eulerAngles.y;
-        D_B1 = R_B1.GetComponent<Transform>().localEulerAngles.x - destino.Brazo1.eulerAngles.x;
-        D_B2 = R_B2.GetComponent<Transform>().localEulerAngles.x - destino.Brazo2.eulerAngles.x;
-        D_M1 = R_M1.GetComponent<Transform>().localEulerAngles.y - destino.Muneca1.eulerAngles.y;
-        D_M2 = R_M2.GetComponent<Transform>().localEulerAngles.x - destino.Muneca2.eulerAngles.x;
-        D_MA = R_MA.GetComponent<Transform>().localEulerAngles.y - destino.Mano.eulerAngles.y;
+        D_BM = destino.BaseMovil.eulerAngles.y - R_BM.GetComponent<Transform>().localEulerAngles.y;
+        D_B1 = destino.Brazo1.eulerAngles.x - R_B1.GetComponent<Transform>().localEulerAngles.x;
+        D_B2 = destino.Brazo2.eulerAngles.x - R_B2.GetComponent<Transform>().localEulerAngles.x;
+        D_M1 = destino.Muneca1.eulerAngles.y - R_M1.GetComponent<Transform>().localEulerAngles.y;
+        D_M2 = destino.Muneca2.eulerAngles.x - R_M2.GetComponent<Transform>().localEulerAngles.x;
+        D_MA = destino.Mano.eulerAngles.y - R_MA.GetComponent<Transform>().localEulerAngles.y;
 
         if (Mathf.Abs(D_BM) > 181)
         {
@@ -98,110 +103,6 @@ public class Traslacion : MonoBehaviour
             if (D_MA > 0) D_MA = 360 - D_MA;
             else D_MA = -360 - D_MA;
         }
-
-        ////Empezamos con la Base -------------------------------------------------------------------------------------------------------------------------------------------------
-        //while (compare(F_BM.GetComponent<Transform>().localEulerAngles.y, destino.BaseMovil.eulerAngles.y, 0, 0) && flagAbort < 20)
-        //{
-        //    distancia(F_BM, R_BM, 190, new Vector3(0, 0, speedTest), D_BM,1);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_BM.GetComponent<Transform>().rotation = destino.BaseMovil;
-        //    D_BM = 400;
-        //}
-        //F_BM.GetComponent<Transform>().rotation = destino.BaseMovil;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
-
-        ////Se mueve brazo 1 ------------------------------------------------------------------------------------------------------------------------------------------------------
-        //F_B1.GetComponent<Transform>().rotation = R_B1.GetComponent<Transform>().rotation;
-        //F_B2.GetComponent<Transform>().rotation = R_B2.GetComponent<Transform>().rotation;
-        //F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
-        //F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
-        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
-
-        //while (compare(F_B1.GetComponent<Transform>().localEulerAngles.x, destino.Brazo1.eulerAngles.x, F_B1.GetComponent<Transform>().localEulerAngles.z, destino.Brazo1.eulerAngles.z) && flagAbort < 20)
-        //{
-        //    distancia(F_B1, R_B1, 200, new Vector3(0, speedTest, 0), D_B1, 2);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_B1.GetComponent<Transform>().rotation = destino.Brazo1;
-        //    D_B1 = 0;
-        //}
-        //F_B1.GetComponent<Transform>().rotation = destino.Brazo1;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
-
-        ////Se mueve Brazo 2 ------------------------------------------------------------------------------------------------------------------------------------------------------
-        //F_B2.GetComponent<Transform>().rotation = R_B2.GetComponent<Transform>().rotation;
-        //F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
-        //F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
-        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
-
-        //while (compare(F_B2.GetComponent<Transform>().localEulerAngles.x, destino.Brazo2.eulerAngles.x, F_B2.GetComponent<Transform>().localEulerAngles.z, destino.Brazo2.eulerAngles.z) && flagAbort < 20)
-        //{
-        //    distancia(F_B2, R_B2, 280, new Vector3(0, speedTest, 0), D_B2, 3);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_B2.GetComponent<Transform>().rotation = destino.Brazo2;
-        //    D_B2 = 0;
-        //}
-        //F_B2.GetComponent<Transform>().rotation = destino.Brazo2;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
-
-        ////Se mueve Muneca 1 -----------------------------------------------------------------------------------------------------------------------------------------------------
-        //F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
-        //F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
-        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
-
-        //while (compare(F_M1.GetComponent<Transform>().localEulerAngles.y, destino.Muneca1.eulerAngles.y, 0, 0) && flagAbort < 20)
-        //{
-        //    distancia(F_M1, R_M1, 190, new Vector3(0, speedTest, 0), D_M1, 4);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_M1.GetComponent<Transform>().rotation = destino.Muneca1;
-        //    D_M1 = 0;
-        //}
-        //F_M1.GetComponent<Transform>().rotation = destino.Muneca1;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
-
-        ////Se mueve Muneca 2 ------------------------------------------------------------------------------------------------------------------------------------------------------
-        //F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
-        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
-
-        //while (compare(F_M2.GetComponent<Transform>().localEulerAngles.x, destino.Muneca2.eulerAngles.x, 0, 0) && flagAbort < 20)
-        //{
-        //    distancia(F_M2, R_M2, 230, new Vector3(0, speedTest, 0), D_M2, 5);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_M2.GetComponent<Transform>().rotation = destino.Muneca2;
-        //    D_M2 = 0;
-        //}
-        ////F_M2.GetComponent<Transform>().rotation = destino.Muneca2;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
-
-        ////Se mueve Mano -----------------------------------------------------------------------------------------------------------------------------------------------------
-        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
-
-        //while (compare(F_MA.GetComponent<Transform>().localEulerAngles.y, destino.Mano.eulerAngles.y, 0, 0) && flagAbort < 20)
-        //{
-        //    distancia(F_MA, R_MA, 190, new Vector3(speedTest, 0, 0), D_MA, 6);
-        //}
-        //if (flagAbort >= 20)
-        //{
-        //    //F_MA.GetComponent<Transform>().rotation = destino.Mano;
-        //    D_MA = 0;
-        //}
-        //F_MA.GetComponent<Transform>().rotation = destino.Mano;
-        //speedTest = Mathf.Abs(speedTest * Mathf.Pow(2, flagAbort));
-        //flagAbort = 0;
 
         C_BM = Mathf.Abs(D_BM);
         C_B1 = Mathf.Abs(D_B1);
@@ -329,8 +230,8 @@ public class Traslacion : MonoBehaviour
             //Movimiento Muneca 2
             if (C_M2 > 0)
             {
-                if (D_M2 > 0) R_M2.GetComponent<Transform>().Rotate(new Vector3( 0, -speedTest * 10, 0) * Time.deltaTime);
-                else R_M2.GetComponent<Transform>().Rotate(new Vector3( 0, +speedTest * 10, 0) * Time.deltaTime);
+                if (D_M2 > 0) R_M2.GetComponent<Transform>().Rotate(new Vector3( 0, speedTest * 10, 0) * Time.deltaTime);
+                else R_M2.GetComponent<Transform>().Rotate(new Vector3( 0, -speedTest * 10, 0) * Time.deltaTime);
 
                 C_M2 = C_M2 - speedTest * 10 * Time.deltaTime;
             }
@@ -346,11 +247,12 @@ public class Traslacion : MonoBehaviour
             //else R_MA.GetComponent<Transform>().rotation = destino.Mano;
             yield return null;
         }
-        F_B1.GetComponent<Transform>().rotation = R_B1.GetComponent<Transform>().rotation;
-        F_B2.GetComponent<Transform>().rotation = R_B2.GetComponent<Transform>().rotation;
-        F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
-        F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
-        F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
+        yield return null;
+        //F_B1.GetComponent<Transform>().rotation = R_B1.GetComponent<Transform>().rotation;
+        //F_B2.GetComponent<Transform>().rotation = R_B2.GetComponent<Transform>().rotation;
+        //F_M1.GetComponent<Transform>().rotation = R_M1.GetComponent<Transform>().rotation;
+        //F_M2.GetComponent<Transform>().rotation = R_M2.GetComponent<Transform>().rotation;
+        //F_MA.GetComponent<Transform>().rotation = R_MA.GetComponent<Transform>().rotation;
     }
 }
 
