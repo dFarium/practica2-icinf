@@ -13,7 +13,7 @@ public class SaveLoadScorbot : MonoBehaviour
     public Datos_Guardados_Scorbot piezas;
 
     //Se adjuntan en Unity todas las piezas conectadas
-    public GameObject BF, HM, BR, AB, CM;
+    public GameObject BF, HM, BR, AB, CM, MA;
 
     //Carpeta en la que se encuentran los archivos de guardado
     public const string carpeta = "Scorbot-Data/";
@@ -51,6 +51,7 @@ public class SaveLoadScorbot : MonoBehaviour
         piezas.Brazo = BR.GetComponent<Transform>().rotation;
         piezas.Antebrazo = AB.GetComponent<Transform>().rotation;
         piezas.ConjuntoMano = CM.GetComponent<Transform>().rotation;
+        piezas.mano= MA.GetComponent<Transform>().rotation;
         //ejecuta la funcion SaveData para guardar los datos
         SaveData(piezas, namefileData);
     }
@@ -78,6 +79,7 @@ public class SaveLoadScorbot : MonoBehaviour
         BR.GetComponent<Transform>().rotation = piezas.Brazo;
         AB.GetComponent<Transform>().rotation = piezas.Antebrazo;
         CM.GetComponent<Transform>().rotation = piezas.ConjuntoMano;
+        MA.GetComponent<Transform>().rotation = piezas.mano;
     }
 
     public static void SaveData<T>(T data, string fileName)
