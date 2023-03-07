@@ -5,9 +5,9 @@ using UnityEngine;
 public class TraslacionScorbot : MonoBehaviour
 {
 
-    //"destino" ser� el objeto con todas las piezas destino
+    //"destino" sera el objeto con todas las piezas destino
     public Datos_Guardados_Scorbot destino;
-    //"numeroDestino" corresponde al numero de archivo de guardado al que se acceder�
+    //"numeroDestino" corresponde al numero de archivo de guardado al que se accedera
     public NumeroVariable numeroDestino;
 
     //Se adjuntan en Unity todas las piezas conectadas
@@ -20,11 +20,11 @@ public class TraslacionScorbot : MonoBehaviour
     //Valor absoluto de distancia recorrida por cada objeto
     public float CH, CBR, CAB, CMU, CMA;
 
-    /* "speedTest" es la velocidad con la cual se calcular� la distancia del punto A al B de cada pieza del robot.
-     * "margen" es el margen de error para encontrar cada posici�n.*/
+    /* "speedTest" es la velocidad con la cual se calculara la distancia del punto A al B de cada pieza del robot.
+     * "margen" es el margen de error para encontrar cada posicion.*/
     public float speedReal, speedTest = 1, margen;
 
-    //los distintos flags que se usar�n para reducir la velocidad en casos de error o abortar el proceso y movilizar cada parte.
+    //los distintos flags que se usaron para reducir la velocidad en casos de error o abortar el proceso y movilizar cada parte.
     public int flagAbort, stop;
 
     //Activada por el boton en canvas
@@ -100,11 +100,11 @@ public class TraslacionScorbot : MonoBehaviour
         FMU.GetComponent<Transform>().rotation = RMU.GetComponent<Transform>().rotation;
         FMA.GetComponent<Transform>().rotation = RMA.GetComponent<Transform>().rotation;
 
-        while (compare(FAB.GetComponent<Transform>().localEulerAngles.x, destino.Antebrazo.eulerAngles.x, 0, 0) && flagAbort < 20)
+        while (compare(FAB.GetComponent<Transform>().localEulerAngles.x, destino.Antebrazo.eulerAngles.x, 0, 0) && flagAbort < 10)
         {
             distancia(FAB, RAB, 280, new Vector3(speedTest, 0, 0), DAB, 3);
         }
-        if (flagAbort >= 20)
+        if (flagAbort >= 10)
         {
             Debug.Log("Antebrazo alcanzo limite");
             DAB = 0;
