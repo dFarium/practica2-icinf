@@ -315,7 +315,7 @@ RectTransform:
   - {fileID: 2023345381}
   - {fileID: 1079483860}
   m_Father: {fileID: 8049617107634948458}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1233,6 +1233,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826046294}
   m_CullTransparentMesh: 1
+--- !u!1 &866871232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866871233}
+  m_Layer: 0
+  m_Name: GeneradorSecuencias
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866871233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866871232}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -292, y: -492, z: 22.012701}
+  m_LocalScale: {x: 1.7877096, y: 1.7877096, z: 1.7877096}
+  m_Children:
+  - {fileID: 8049617107925118565}
+  - {fileID: 8049617107109629614}
+  m_Father: {fileID: 8049617107634948458}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995848763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,12 +3448,15 @@ MonoBehaviour:
     Antebrazo: {x: 0, y: 0, z: 0, w: 0}
     ConjuntoMano: {x: 0, y: 0, z: 0, w: 0}
     mano: {x: 0, y: 0, z: 0, w: 0}
+    cubo: {x: 0, y: 0, z: 0, w: 0}
+    PosCubo: {x: 0, y: 0, z: 0}
   BF: {fileID: 2028480345218167242}
   HM: {fileID: 5844394237643844077}
   BR: {fileID: 938260696840869916}
   AB: {fileID: 3875230438509612631}
   CM: {fileID: 8049617106691652749}
   MA: {fileID: 8049617106325242209}
+  CUBO: {fileID: 8049617107316121596}
   namefileData: 'scorbot '
 --- !u!114 &4224118675235286915
 MonoBehaviour:
@@ -3442,6 +3477,8 @@ MonoBehaviour:
     Antebrazo: {x: 0, y: 0, z: 0, w: 0}
     ConjuntoMano: {x: 0, y: 0, z: 0, w: 0}
     mano: {x: 0, y: 0, z: 0, w: 0}
+    cubo: {x: 0, y: 0, z: 0, w: 0}
+    PosCubo: {x: 0, y: 0, z: 0}
   numeroDestino: {fileID: 219056786}
   RH: {fileID: 5844394237643844077}
   RBR: {fileID: 938260696840869916}
@@ -4870,10 +4907,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
-        m_MethodName: reset
-        m_Mode: 1
+      - m_Target: {fileID: 4224118675235286914}
+        m_TargetAssemblyTypeName: SaveLoadScorbot, Assembly-CSharp
+        m_MethodName: cargarDatos
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5834,7 +5871,7 @@ RectTransform:
   - {fileID: 8049617108223815835}
   - {fileID: 8049617107668099056}
   m_Father: {fileID: 8049617107634948458}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -8224,17 +8261,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8049617107109629601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -12.3133545}
+  m_LocalScale: {x: 0.559375, y: 0.559375, z: 0.559375}
   m_Children:
   - {fileID: 8049617107372848007}
   - {fileID: 8049617107610517147}
-  m_Father: {fileID: 8049617107634948458}
-  m_RootOrder: 10
+  m_Father: {fileID: 866871233}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -229, y: -268.16733}
+  m_AnchoredPosition: {x: 7.271866, y: -5.12796}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8049617107109629615
@@ -8765,7 +8802,7 @@ RectTransform:
   m_Children:
   - {fileID: 8049617108134013143}
   m_Father: {fileID: 8049617107634948458}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10248,21 +10285,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TestSave, Assembly-CSharp
-        m_MethodName: resetObjeto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PickUpObject, Assembly-CSharp
-        m_MethodName: resetPick
+      - m_Target: {fileID: 4224118675235286914}
+        m_TargetAssemblyTypeName: SaveLoadScorbot, Assembly-CSharp
+        m_MethodName: cargarCubo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10726,8 +10751,7 @@ RectTransform:
   - {fileID: 8049617107541742132}
   - {fileID: 8049617106669667472}
   - {fileID: 8049617107833254323}
-  - {fileID: 8049617107109629614}
-  - {fileID: 8049617107925118565}
+  - {fileID: 866871233}
   - {fileID: 8049617106642280980}
   - {fileID: 8049617107186224235}
   - {fileID: 84388900}
@@ -12219,16 +12243,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8049617107925118564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -12.3133545}
+  m_LocalScale: {x: 0.559375, y: 0.559375, z: 0.559375}
   m_Children:
   - {fileID: 8049617107708923281}
-  m_Father: {fileID: 8049617107634948458}
-  m_RootOrder: 11
+  m_Father: {fileID: 866871233}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -229, y: -231.26736}
+  m_AnchoredPosition: {x: 7.271866, y: 15.512939}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8049617107964781480

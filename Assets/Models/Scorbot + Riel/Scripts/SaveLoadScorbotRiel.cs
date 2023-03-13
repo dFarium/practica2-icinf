@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class SaveLoadScorbot : MonoBehaviour
+public class SaveLoadScorbotRiel : MonoBehaviour
 {
     //Valores leidos desde el Canvas
     public NumeroVariable numeroSave;
     public NumeroVariable numeroLoad;
 
     //Se creara un object que guarde los datos relevantes de las piezas
-    public Datos_Guardados_Scorbot piezas;
+    public DatosGuardadosScorbotRiel piezas;
 
     //Se adjuntan en Unity todas las piezas conectadas
-    public GameObject BF, HM, BR, AB, CM, MA, CUBO;
+    public GameObject BF, HM, BR, AB, CM, MA, CUBO, Robot;
 
     //Carpeta en la que se encuentran los archivos de guardado
-    public const string carpeta = "Scorbot-Data/";
+    public const string carpeta = "Scorbot-Riel-Data/";
     //El nombre con el cual se crearan los archivos json
     public string namefileData;
 
@@ -24,7 +24,7 @@ public class SaveLoadScorbot : MonoBehaviour
     private void Start()
     {
         //Se crea una variable para ver si existe o no la "Posicion 0"
-        var dataFound = LoadData<Datos_Guardados_Scorbot>("scorbot 0");
+        var dataFound = LoadData<DatosGuardadosScorbotRiel>("scorbot 0");
 
         if (dataFound != null)
         {
@@ -35,7 +35,7 @@ public class SaveLoadScorbot : MonoBehaviour
         {
             //Si no existe, crea el archivo json "Posicion 0"
             namefileData = "scorbot ";
-            piezas = new Datos_Guardados_Scorbot();
+            piezas = new DatosGuardadosScorbotRiel();
             guardarDatos(0);
         }
     }
@@ -46,14 +46,15 @@ public class SaveLoadScorbot : MonoBehaviour
         namefileData = "scorbot " + numeroGuardado;
 
         //Guarda todas las rotaciones de todas las piezas del kuka
+        piezas.PosRobot = Robot.GetComponent<Transform>().position;
         piezas.Base = BF.GetComponent<Transform>().rotation;
         piezas.Hombro = HM.GetComponent<Transform>().rotation;
         piezas.Brazo = BR.GetComponent<Transform>().rotation;
         piezas.Antebrazo = AB.GetComponent<Transform>().rotation;
         piezas.ConjuntoMano = CM.GetComponent<Transform>().rotation;
-        piezas.mano= MA.GetComponent<Transform>().rotation;
+        piezas.mano = MA.GetComponent<Transform>().rotation;
         piezas.cubo = CUBO.GetComponent<Transform>().rotation;
-        piezas.PosCubo= CUBO.GetComponent<Transform>().position;
+        piezas.PosCubo = CUBO.GetComponent<Transform>().position;
         //ejecuta la funcion SaveData para guardar los datos
         SaveData(piezas, namefileData);
     }
@@ -61,7 +62,7 @@ public class SaveLoadScorbot : MonoBehaviour
     public void cargarDatos(int numeroGuardado)
     {
         //Se crea una variable para ver si existe o no 
-        var dataFound = LoadData<Datos_Guardados_Scorbot>("scorbot " + numeroGuardado);
+        var dataFound = LoadData<DatosGuardadosScorbotRiel>("scorbot " + numeroGuardado);
         if (dataFound != null)
         {
             //Si existe, llena data con los archivos encontrados
@@ -71,11 +72,12 @@ public class SaveLoadScorbot : MonoBehaviour
         {
             //Si no existe, crea un archivo json con los datos actuales del brazo robot
             namefileData = "scorbot ";
-            piezas= new Datos_Guardados_Scorbot();
+            piezas = new DatosGuardadosScorbotRiel();
             guardarDatos(numeroGuardado);
         }
 
         //A continuacion se cargan datos de rotacion de cada pieza del kuka
+        Robot.GetComponent<Transform>().position = piezas.PosRobot;
         BF.GetComponent<Transform>().rotation = piezas.Base;
         HM.GetComponent<Transform>().rotation = piezas.Hombro;
         BR.GetComponent<Transform>().rotation = piezas.Brazo;
@@ -89,7 +91,7 @@ public class SaveLoadScorbot : MonoBehaviour
     public void cargarCubo()
     {
         //Se crea una variable para ver si existe o no 
-        var dataFound = LoadData<Datos_Guardados_Scorbot>("scorbot 0");
+        var dataFound = LoadData<DatosGuardadosScorbotRiel>("scorbot 0");
         if (dataFound != null)
         {
             //Si existe, llena data con los archivos encontrados
@@ -99,7 +101,7 @@ public class SaveLoadScorbot : MonoBehaviour
         {
             //Si no existe, crea un archivo json con los datos actuales del cubo
             namefileData = "scorbot ";
-            piezas = new Datos_Guardados_Scorbot();
+            piezas = new DatosGuardadosScorbotRiel();
             guardarDatos(0);
         }
 

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Datos_Guardados_Scorbot
+public class DatosGuardadosScorbotRiel
 {
     //Creamos las variables de rotacion de cada pieza del brazo robot
+    public Vector3 PosRobot;
     public Quaternion Base;
     public Quaternion Hombro;
     public Quaternion Brazo;
