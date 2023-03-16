@@ -9,7 +9,7 @@ public class Rail_move : MonoBehaviour
     private Vector3 Move = new Vector3(0, 0, 0);
     private Vector3 FinalPos;
     public Text textoVelocidad;
-    public float speed;
+    public float speed, limIZQ, limDER;
     private int flag = 0;
 
     public void Izquierda()
@@ -36,7 +36,7 @@ public class Rail_move : MonoBehaviour
         if (flag == 1)
         {
             speed = float.Parse(textoVelocidad.text);
-            if ((Move.x > 0 && transform.position.x < -13.3) || (Move.x < 0 && transform.position.x > -23.2))
+            if ((Move.x > 0 && transform.position.x < limDER) || (Move.x < 0 && transform.position.x > limIZQ))
             {
                 transform.position = transform.position + Move * speed * Time.deltaTime;
             }
