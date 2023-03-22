@@ -5,9 +5,9 @@ using UnityEngine;
 public class Traslacion : MonoBehaviour
 {
 
-    //"destino" será el objeto con todas las piezas destino
+    //"destino" serï¿½ el objeto con todas las piezas destino
     public Datos_Guardados destino;
-    //"numeroDestino" corresponde al numero de archivo de guardado al que se accederá
+    //"numeroDestino" corresponde al numero de archivo de guardado al que se accederï¿½
     public NumeroVariable numeroDestino;
 
     //Se adjuntan en Unity todas las piezas conectadas
@@ -20,17 +20,17 @@ public class Traslacion : MonoBehaviour
     //Valor absoluto de distancia recorrida por cada objeto
     public float C_BM, C_B1, C_B2, C_M1, C_M2, C_MA;
 
-    /* "speedTest" es la velocidad con la cual se calculará la distancia del punto A al B de cada pieza del robot.
-     * "margen" es el margen de error para encontrar cada posición.*/
+    /* "speedTest" es la velocidad con la cual se calcularï¿½ la distancia del punto A al B de cada pieza del robot.
+     * "margen" es el margen de error para encontrar cada posiciï¿½n.*/
     public float speedTest = 1, margen;
 
-    //los distintos flags que se usarán para reducir la velocidad en casos de error o abortar el proceso y movilizar cada parte.
+    //los distintos flags que se usarï¿½n para reducir la velocidad en casos de error o abortar el proceso y movilizar cada parte.
     public int flagAbort, stop;
 
     //Activada por el boton en canvas
     public void MoverDireccion()
     {
-        //Se crea una variable para ver si existe o no 
+        //Se crea una variable para ver si existe o no
         var dataFound = SaveLoadKuka.LoadData<Datos_Guardados>("Posicion " + numeroDestino.numeroDir);
         if (dataFound != null)
         {
