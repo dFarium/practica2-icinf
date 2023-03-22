@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+
+//Clase en la cual se  crean variables a fin de guardarlo en un txt
 public class Datos_Guardados_Scorbot
 {
     //Creamos las variables de rotacion de cada pieza del brazo robot
@@ -12,6 +14,8 @@ public class Datos_Guardados_Scorbot
     public Quaternion Antebrazo;
     public Quaternion ConjuntoMano;
     public Quaternion mano;
+
+    //Creamos las variables de posicion y rotacion del cubo
     public Quaternion cubo;
     public Vector3 PosCubo;
 }
