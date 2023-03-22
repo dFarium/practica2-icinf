@@ -51,7 +51,11 @@ public class WarningColision : MonoBehaviour
             if (nombre == "Muneca2" && other.name == "Muneca1") return;
             if (nombre == "Muneca2" && other.name == "Mano") return;
             if (nombre == "Mano" && other.name == "Muneca2") return;
+            if (nombre == "Muneca2" && other.name == "Pinza") return;
+            if (nombre == "Pinza" && other.name == "Muneca2") return;
         }
+
+        
 
         //Ignorar warning colision entre GameObjects con el tag "IgnorarColision" y "Cubo 1"
         if (tag == "IgnorarColision" && other.tag == "Cubo 1") return;
@@ -59,6 +63,7 @@ public class WarningColision : MonoBehaviour
         //Ignorar pickupzone
         if (nombre == "PickUpZone") return;
         if (other.name == "PickUpZone") return;
+        //Ignorar InteractionZone
 
 
 
