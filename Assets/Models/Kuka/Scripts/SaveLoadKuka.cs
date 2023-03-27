@@ -13,7 +13,7 @@ public class SaveLoadKuka : MonoBehaviour
     public Datos_Guardados piezas;
 
     //Piezas individuales del robot, se dan como parametro desde unity
-    public GameObject BF, BM, B1, B2, M1, M2, MA;
+    public GameObject BF, BM, B1, B2, M1, M2, MA, CUBO;
 
     //Carpeta en la que se encuentran los archivos de guardado
     public const string carpeta = "Kuka-Data/";
@@ -57,8 +57,8 @@ public class SaveLoadKuka : MonoBehaviour
         piezas.Muneca1 = M1.GetComponent<Transform>().rotation;
         piezas.Muneca2 = M2.GetComponent<Transform>().rotation;
         piezas.Mano = MA.GetComponent<Transform>().rotation;
-        // piezas.cubo = CUBO.GetComponent<Transform>().rotation;
-        // piezas.PosCubo= CUBO.GetComponent<Transform>().position;
+        piezas.cubo = CUBO.GetComponent<Transform>().rotation;
+        piezas.PosCubo = CUBO.GetComponent<Transform>().position;
         //ejecuta la funcion SaveData para guardar los datos
         SaveData(piezas, namefileData);
     }
@@ -79,8 +79,8 @@ public class SaveLoadKuka : MonoBehaviour
             M1.GetComponent<Transform>().rotation = piezas.Muneca1;
             M2.GetComponent<Transform>().rotation = piezas.Muneca2;
             MA.GetComponent<Transform>().rotation = piezas.Mano;
-            // CUBO.GetComponent<Transform>().rotation = piezas.cubo;
-            // CUBO.GetComponent<Transform>().position = piezas.PosCubo;
+            CUBO.GetComponent<Transform>().rotation = piezas.cubo;
+            CUBO.GetComponent<Transform>().position = piezas.PosCubo;
         }
         else
         {
@@ -88,25 +88,25 @@ public class SaveLoadKuka : MonoBehaviour
             Debug.Log("ERROR, el destino no existe");
         }
     }
-
-    //public void cargarCubo()
-    //{
-    //    //Actualizamos la variable para cargar la posición 0
-    //    var dataFound = LoadData<Datos_Guardados>("Posicion 0");
-    //    if (dataFound != null)
-    //    {
-    //        //Si existe, actualiza la variable "piezas" con los valores encontrados
-    //        piezas = dataFound;
-    //        //A continuacion se cargan los datos del cubo
-    //        CUBO.GetComponent<Transform>().rotation = piezas.cubo;
-    //        CUBO.GetComponent<Transform>().position = piezas.PosCubo;
-    //    }
-    //    else
-    //    {
-    //        //Si no existe, manda un aviso por consola
-    //        Debug.Log("ERROR, el destino no existe");
-    //    }
-    //}
+    //Reinicia la posicion del cubo
+    public void cargarCubo()
+    {
+        //Actualizamos la variable para cargar la posición 0
+        var dataFound = LoadData<Datos_Guardados>("Posicion 0");
+        if (dataFound != null)
+        {
+            //Si existe, actualiza la variable "piezas" con los valores encontrados
+            piezas = dataFound;
+            //A continuacion se cargan los datos del cubo
+            CUBO.GetComponent<Transform>().rotation = piezas.cubo;
+            CUBO.GetComponent<Transform>().position = piezas.PosCubo;
+        }
+        else
+        {
+            //Si no existe, manda un aviso por consola
+            Debug.Log("ERROR, el destino no existe");
+        }
+    }
 
     //Funcion que guarda en memoria las posiciones del robot
     public static void SaveData<T>(T data, string fileName)

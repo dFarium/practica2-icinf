@@ -87,6 +87,7 @@ public class SaveLoadScorbot : MonoBehaviour
         }
     }
 
+    //Reinicia la posicion del cubo
     public void cargarCubo()
     {
         //Actualizamos la variable para cargar la posición 0
