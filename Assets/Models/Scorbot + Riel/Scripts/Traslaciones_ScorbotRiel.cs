@@ -5,13 +5,13 @@ using UnityEngine;
 public class Traslaciones_ScorbotRiel : MonoBehaviour
 {
 
-    //Se cargara el archivo [numeroDestino] y se definira "Destino" como la posicion final del robot
+    //Se cargara el archivo [numeroDestino] y se definira "destino" como la posicion final del robot
     public NumeroVariable numeroDestino;
     public DatosGuardadosScorbotRiel destino;
 
     //Las piezas con una R inicial corresponden a el robot visible por el usuario
     public GameObject Riel, RH, RBR, RAB, RMU, RMA;
-        //Las piezas con una F inicial corresponden a un robot invisible por el usuario, y es usado para realizar calculos
+    //Las piezas con una F inicial corresponden a un robot invisible por el usuario, y es usado para realizar calculos
     public GameObject FH, FBR, FAB, FMU, FMA;
 
     //Distancia recorrida por cada pieza del robot
