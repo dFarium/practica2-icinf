@@ -71,6 +71,7 @@ public class SaveLoadScorbotRiel : MonoBehaviour
             //Si existe, actualiza la variable "piezas" con los valores encontrados
             piezas = dataFound;
             //A continuacion se cargan datos cada pieza del robot
+            Debug.Log(piezas.PosRobot);
             Robot.GetComponent<Transform>().position = piezas.PosRobot;
             BF.GetComponent<Transform>().rotation = piezas.Base;
             HM.GetComponent<Transform>().rotation = piezas.Hombro;

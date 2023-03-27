@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class TraslacionScorbot : MonoBehaviour
 {
-
-    //"destino" sera el objeto con todas las piezas destino
-    public Datos_Guardados_Scorbot destino;
-    //"numeroDestino" corresponde al numero de archivo de guardado al que se accedera
+    //Se cargara el archivo [numeroDestino] y se definira "Destino" como la posicion final del robot
     public NumeroVariable numeroDestino;
+    public Datos_Guardados_Scorbot destino;
 
-    //Se adjuntan en Unity todas las piezas conectadas
+    //Las piezas con una R inicial corresponden a el robot visible por el usuario
     public GameObject RH, RBR, RAB, RMU, RMA;
+    //Las piezas con una F inicial corresponden a un robot invisible por el usuario, y es usado para realizar calculos
     public GameObject FH, FBR, FAB, FMU, FMA;
 
-    //Distancia recorrida por cada objeto
+    //Distancia recorrida por cada pieza del robot
     public float DH, DBR, DAB, DMU, DMA;
 
-    //Valor absoluto de distancia recorrida por cada objeto
+    //Valor absoluto de distancia recorrida por cada pieza del robot
     public float CH, CBR, CAB, CMU, CMA;
 
-    /* "speedTest" es la velocidad con la cual se calculara la distancia del punto A al B de cada pieza del robot.
-     * "margen" es el margen de error para encontrar cada posicion.*/
+    /* "speedReal" es la velocidad inicial para las pruebas
+    "speedTest" es la velocidad con la cual se calculara la distancia del punto A al B de cada pieza del robot, disminuira por cada error
+    "margen" es el margen de error para encontrar cada posicion*/
     public float speedReal, speedTest = 1, margen;
 
     //los distintos flags que se usaron para reducir la velocidad en casos de error o abortar el proceso y movilizar cada parte.
@@ -30,14 +30,14 @@ public class TraslacionScorbot : MonoBehaviour
     //Activada por el boton en canvas
     public void MoverDireccion()
     {
-        //Se crea una variable para ver si existe o no 
+        //Se crea una variable para ver si existe o no
         var dataFound = SaveLoadScorbot.LoadData<Datos_Guardados_Scorbot>("scorbot " + numeroDestino.numeroDir);
         if (dataFound != null)
         {
             //Si existe, llena data con los archivos encontrados
             destino = dataFound;
             Debug.Log("Cargando destino para animar : scorbot " + numeroDestino.numeroDir);
-            //Empieza el movimiento
+            //Se reinician las variables
             DH = 0;
             DBR = 0;
             DAB = 0;
@@ -46,7 +46,9 @@ public class TraslacionScorbot : MonoBehaviour
             flagAbort = 0;
             speedTest = speedReal;
             stop = 0;
+            //Calcula el movimiento que debe realizar
             StartCoroutine("CalcularDistancia");
+            //Ejecuta el movimiento
             if (stop != 1) StartCoroutine("MovimientoSimple");
         }
         else
@@ -55,14 +57,16 @@ public class TraslacionScorbot : MonoBehaviour
         }
     }
 
+    //Funcion usada para debug
     public void Stop()
     {
         stop = 1;
     }
 
+    //Calcula el movimiento que debe realizar
     IEnumerator CalcularDistancia()
     {
-        //Se mueve Hombro ------------------------------------------------------------------------------------------------------------------------------------------------------
+        //Calcula el movimiento del Hombro ------------------------------------------------------------------------------------------------------------------------------------------------------
         while (compare(FH.GetComponent<Transform>().localEulerAngles.y, destino.Hombro.eulerAngles.y, 0, 0) && flagAbort < 20)
         {
             distancia(FH, RH, 190, new Vector3(0, speedTest, 0), DH, 1);
@@ -76,7 +80,7 @@ public class TraslacionScorbot : MonoBehaviour
         speedTest = speedReal;
         flagAbort = 0;
 
-        //Se mueve Brazo ------------------------------------------------------------------------------------------------------------------------------------------------------
+        //Calcula el movimiento del Brazo ------------------------------------------------------------------------------------------------------------------------------------------------------
         FBR.GetComponent<Transform>().rotation = RBR.GetComponent<Transform>().rotation;
         FAB.GetComponent<Transform>().rotation = RAB.GetComponent<Transform>().rotation;
         FMU.GetComponent<Transform>().rotation = RMU.GetComponent<Transform>().rotation;
@@ -95,7 +99,7 @@ public class TraslacionScorbot : MonoBehaviour
         speedTest = speedReal;
         flagAbort = 0;
 
-        //Se mueve Antebrazo -----------------------------------------------------------------------------------------------------------------------------------------------------
+        //Calcula el movimiento del Antebrazo ------------------------------------------------------------------------------------------------------------------------------------------------------
         FAB.GetComponent<Transform>().rotation = RAB.GetComponent<Transform>().rotation;
         FMU.GetComponent<Transform>().rotation = RMU.GetComponent<Transform>().rotation;
         FMA.GetComponent<Transform>().rotation = RMA.GetComponent<Transform>().rotation;
@@ -113,7 +117,7 @@ public class TraslacionScorbot : MonoBehaviour
         speedTest = speedReal;
         flagAbort = 0;
 
-        //Se mueve Muñeca ------------------------------------------------------------------------------------------------------------------------------------------------------
+        //Calcula el movimiento de la muñeca ------------------------------------------------------------------------------------------------------------------------------------------------------
         FMU.GetComponent<Transform>().rotation = RMU.GetComponent<Transform>().rotation;
         FMA.GetComponent<Transform>().rotation = RMA.GetComponent<Transform>().rotation;
 
@@ -130,7 +134,7 @@ public class TraslacionScorbot : MonoBehaviour
         speedTest = speedReal;
         flagAbort = 0;
 
-        //Se mueve Mano -----------------------------------------------------------------------------------------------------------------------------------------------------
+        //Calcula el movimiento de la mano ------------------------------------------------------------------------------------------------------------------------------------------------------
         FMA.GetComponent<Transform>().rotation = RMA.GetComponent<Transform>().rotation;
 
         while (compare(FMA.GetComponent<Transform>().localEulerAngles.y, destino.mano.eulerAngles.y, 0, 0) && flagAbort < 20)
@@ -146,6 +150,7 @@ public class TraslacionScorbot : MonoBehaviour
         speedTest = speedReal;
         flagAbort = 0;
 
+        //Cada movimiento se mide en distancia y se calcula el valor absoluto
         CH = Mathf.Abs(DH);
         CBR = Mathf.Abs(DBR);
         CAB = Mathf.Abs(DAB);
@@ -154,6 +159,7 @@ public class TraslacionScorbot : MonoBehaviour
         yield return null;
     }
 
+    //Funcion que compara el punto de inicio y el de llegada
     public bool compare(float puntoInicio, float puntoFin, float verificadorInicio, float verificadorFin)
     {
         if ((puntoInicio < (puntoFin + margen) && puntoInicio > (puntoFin - margen)) && (verificadorInicio < (verificadorFin + 40) && verificadorInicio > (verificadorFin - 40)))
@@ -163,11 +169,13 @@ public class TraslacionScorbot : MonoBehaviour
         return true;
     }
 
+    //Funcion que calcula la distancia
     public void distancia(GameObject RobotIntermedio, GameObject RobotReal, float rangoMax, Vector3 moveVector, float distancia, int piezaActual)
     {
         //Busca el punto en un rango en de valores
         if (distancia >= -rangoMax && distancia <= rangoMax)
         {
+            //Caso correcto, mueve el robot
             RobotIntermedio.GetComponent<Transform>().Rotate(moveVector);
             switch (piezaActual)
             {
@@ -195,6 +203,7 @@ public class TraslacionScorbot : MonoBehaviour
         }
         else
         {
+            //caso contrario, disminuye la velocidad de prueba y cambia el sentido
             speedTest = speedTest / 2;
             speedTest = -speedTest;
             RobotIntermedio.GetComponent<Transform>().rotation = RobotReal.GetComponent<Transform>().rotation;
@@ -220,9 +229,10 @@ public class TraslacionScorbot : MonoBehaviour
         }
     }
 
-
+//Ejecuta el movimiento
     IEnumerator MovimientoSimple()
     {
+        //Mientras la distancia a recorrder de cada pieza sea mayor a 0, mueve la pieza unos grados
         while (CH > 0 || CBR > 0 || CAB > 0 || CMU > 0 || CMA > 0)
         {
             //Movimiento Hombro
@@ -241,7 +251,7 @@ public class TraslacionScorbot : MonoBehaviour
 
                 CBR = CBR - speedTest * 10 * Time.deltaTime;
             }
-            //Movimiento Antebrazo 
+            //Movimiento Antebrazo
             if (CAB > 0)
             {
                 if (DAB > 0) RAB.GetComponent<Transform>().Rotate(new Vector3(speedTest * 10, 0, 0) * Time.deltaTime);
@@ -267,24 +277,24 @@ public class TraslacionScorbot : MonoBehaviour
             }
             yield return null;
         }
+        //Calcula distancia de una forma más simple
         StartCoroutine("SimpleDistancia");
+        //Ejecuta  la distancia calculada
         StartCoroutine("MovimientoCompleto");
         yield return null;
     }
+
+    //Calcula distancia de una forma más simple
     IEnumerator SimpleDistancia()
     {
+        //Calcula la diferencia de angulos entre las diversas posiciones
         DH = destino.Hombro.eulerAngles.y - RH.GetComponent<Transform>().localEulerAngles.y;
-        //Debug.Log("DIF RH " + destino.BaseMovil.eulerAngles.y + " y " + RH.GetComponent<Transform>().localEulerAngles.y + " = " + DH);
         DBR = destino.Brazo.eulerAngles.z - RBR.GetComponent<Transform>().localEulerAngles.z;
-        //Debug.Log("DIF RBR " + destino.Brazo1.eulerAngles.y + " y " + RBR.GetComponent<Transform>().localEulerAngles.y + " = " + DBR);
         DAB = destino.Antebrazo.eulerAngles.x - RAB.GetComponent<Transform>().localEulerAngles.x;
-        //Debug.Log("DIF RAB " + destino.Brazo2.eulerAngles.y + " y " + RAB.GetComponent<Transform>().localEulerAngles.y + " = " + DAB);
         DMU = destino.ConjuntoMano.eulerAngles.z - RMU.GetComponent<Transform>().localEulerAngles.z;
-        //Debug.Log("DIF RMU " + destino.Muneca1.eulerAngles.y + " y " + RMU.GetComponent<Transform>().localEulerAngles.y + " = " + DMU);
         DMA = destino.mano.eulerAngles.y - RMA.GetComponent<Transform>().localEulerAngles.y;
-        //Debug.Log("DIF RMA " + destino.Muneca2.eulerAngles.y + " y " + RMA.GetComponent<Transform>().localEulerAngles.y + " = " + D_M2);
 
-
+        //Si es mayor a 181, se realiza la resta para que realice una vuelta menor
         if (Mathf.Abs(DH) > 181)
         {
             if (DH > 0) DH = 360 - DH;
@@ -319,6 +329,7 @@ public class TraslacionScorbot : MonoBehaviour
         yield return null;
     }
 
+    //Ejecuta  la distancia calculada
     IEnumerator MovimientoCompleto()
     {
         while (CH > 0 || CBR > 0 || CAB > 0 || CMU > 0 || CMA > 0)
@@ -339,7 +350,7 @@ public class TraslacionScorbot : MonoBehaviour
 
                 CBR = CBR - speedTest * 10 * Time.deltaTime;
             }
-            //Movimiento Antebrazo 
+            //Movimiento Antebrazo
             if (CAB > 0)
             {
                 if (DAB > 0) RAB.GetComponent<Transform>().Rotate(new Vector3(speedTest * 10, 0, 0) * Time.deltaTime);
@@ -365,6 +376,8 @@ public class TraslacionScorbot : MonoBehaviour
             }
             yield return null;
         }
+
+        //Finalmente carga las posiciones guardadas para una mayor presición
         RH.GetComponent<Transform>().rotation = destino.Hombro;
         RBR.GetComponent<Transform>().rotation = destino.Brazo;
         RAB.GetComponent<Transform>().rotation = destino.Antebrazo;
