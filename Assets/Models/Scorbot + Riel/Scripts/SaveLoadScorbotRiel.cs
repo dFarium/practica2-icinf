@@ -87,7 +87,7 @@ public class SaveLoadScorbotRiel : MonoBehaviour
             Debug.Log("ERROR, el destino no existe");
         }
     }
-
+    //Reinicia la posicion del cubo
     public void cargarCubo()
     {
         //Actualizamos la variable para cargar la posición 0
