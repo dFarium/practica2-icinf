@@ -1025,7 +1025,7 @@ MonoBehaviour:
   jointStretchAcceleration: 1
   jointMaxStretchVelocity: 1
   jointStretchSmoothingFactor: 0.9
-  enableKeyframeConstraints: 0
+  enableKeyframeConstraints: 1
   strictlyProjectToKeyframeSpace: 0
   constraints: []
 --- !u!4 &508438262
@@ -1499,11 +1499,11 @@ MonoBehaviour:
   secondaryAxis: {x: 0, y: 1, z: 0}
   zeroRotation: {x: -0, y: -0, z: -0, w: 1}
   limitsOffset: {x: 0, y: 0, z: 0}
-  limitAngle: 180
+  limitAngle: 145
   applyEveryFrame: 0
   bounce: 0
   friction: 0
-  hingeAngleOffset: 87
+  hingeAngleOffset: 90
   cross: {x: 0, y: 1, z: 0}
 --- !u!4 &1701383420
 Transform:
